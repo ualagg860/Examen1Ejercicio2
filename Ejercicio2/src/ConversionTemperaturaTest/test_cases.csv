@@ -1,0 +1,38 @@
+input,fromUnit,toUnit,expected
+# CE1 - Celsius → Fahrenheit
+0,Celsius,Fahrenheit,32.0
+100,Celsius,Fahrenheit,212.0
+-273.15,Celsius,Fahrenheit,-459.67
+
+# CE2 - Celsius → Kelvin
+0,Celsius,Kelvin,273.15
+100,Celsius,Kelvin,373.15
+-273.15,Celsius,Kelvin,0.0
+
+# CE3 - Fahrenheit → Celsius
+32,Fahrenheit,Celsius,0.0
+212,Fahrenheit,Celsius,100.0
+-459.67,Fahrenheit,Celsius,-273.15
+
+# CE4 - Fahrenheit → Kelvin
+32,Fahrenheit,Kelvin,273.15
+212,Fahrenheit,Kelvin,373.15
+-459.67,Fahrenheit,Kelvin,0.0
+
+# CE5 - Kelvin → Celsius
+0,Kelvin,Celsius,-273.15
+273.15,Kelvin,Celsius,0.0
+373.15,Kelvin,Celsius,100.0
+
+# CE6 - Kelvin → Fahrenheit
+0,Kelvin,Fahrenheit,-459.67
+373.15,Kelvin,Fahrenheit,212.0
+
+# CE7 - Unidades no válidas
+0,celsius,Rankine,NaN
+0,x,x,NaN
+
+# CE8 - Mismas unidades
+0,Celsius,Celsius,NaN
+100,Kelvin,Kelvin,NaN
+32,Fahrenheit,Fahrenheit,NaN
