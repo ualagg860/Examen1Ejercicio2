@@ -1,4 +1,4 @@
-package ConversionTemperaturaTest;
+package conversionTemperatura;
 
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +14,7 @@ public class TestConversionTemperatura {
     private static final double DELTA = 0.000001;
 
     @ParameterizedTest(name = "[{index}] {0} {1} -> {2} = {3}")
-    @CsvFileSource(files = "src/conversionTemperaturaTest/test_cases.csv", numLinesToSkip = 1)
+    @CsvFileSource(files = "test/conversionTemperatura/test_cases.csv", numLinesToSkip = 1)
     void testConvertTemperature(double input, String fromUnit, String toUnit, String expectedStr) {
         double result = converter.convertTemperature(input, fromUnit, toUnit);
         if (expectedStr.equalsIgnoreCase("NaN")) {
